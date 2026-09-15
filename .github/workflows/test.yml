@@ -3,15 +3,18 @@ name: CI
 on: workflow_dispatch
 
 jobs:
-  echo_on_linux:
-    runs-on: ubuntu-latest
+    date_on_linux:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Run a multi-line script
+              run: |
+                  echo Date on linux
+                  date
+    date_on_windows:
+        runs-on: windows-latest
+        steps:
+            - name: Run a multi-line script
+              run: |
+                  echo "Date on Windows"
+                  Get-Date
 
-    steps:
-      - name: Run a one-line script
-        run: echo Hello, World!
-
-      - name: Run a multi-line script
-        run: |
-          echo first scrpit,
-          echo second scrpit.
-          date
