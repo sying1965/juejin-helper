@@ -12,6 +12,6 @@ jobs:
 
       - name: Run a multi-line script
         run: 
-          echo first scrpit
-          echo second scrpit
+          echo first scrpit,
+          echo second scrpit.
           date
