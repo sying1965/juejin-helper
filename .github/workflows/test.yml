@@ -9,7 +9,7 @@ jobs:
             - name: Run a multi-line script
               run: |
                   echo Date on linux
-                  date1
+                  date
     date_on_windows:
         runs-on: windows-latest
         # 加入 if 和 needs，if 绑定条件、needs 绑定 job的name
